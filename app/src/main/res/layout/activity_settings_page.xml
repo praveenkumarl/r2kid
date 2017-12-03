@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.praveenkumarl.r2kid.settings_page">
+
+    <TextView
+        android:id="@+id/tvClearDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="24dp"
+        android:text="Clear database" />
+
+    <Button
+        android:id="@+id/btClearDB"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvClearDB"
+        android:layout_alignBottom="@+id/tvClearDB"
+        android:layout_marginStart="67dp"
+        android:layout_toEndOf="@+id/tvClearDB"
+        android:text="Clear DB" />
+</RelativeLayout>

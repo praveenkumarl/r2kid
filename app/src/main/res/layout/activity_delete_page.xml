@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:text="Delete page" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:textSize="18dp"
+        android:text="Name"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvDOBLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of  Birth"
+        android:textSize="18dp"
+        android:layout_below="@+id/tvViewName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:id="@+id/tvViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/enter_name"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/tvName"
+        android:textSize="18dp"
+        android:layout_toStartOf="@+id/bNext" />
+
+    <TextView
+        android:id="@+id/tvViewDOB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:textIsSelectable="true"
+        android:text="@string/enter_dob"
+        android:onClick="setDate"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignTop="@+id/tvDOBLabel"
+        android:layout_alignStart="@+id/tvViewName"
+        android:textSize="18dp"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/bPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prev_txt"
+        android:layout_marginBottom="31dp"
+        android:layout_marginEnd="17dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/bNext" />
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/bNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next_txt"
+        android:layout_alignBaseline="@+id/bPrev"
+        android:layout_alignBottom="@+id/bPrev"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="67dp" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/bDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Delete"
+        android:layout_above="@+id/bPrev"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

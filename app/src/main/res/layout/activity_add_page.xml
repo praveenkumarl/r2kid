@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:text="Add details"
+        android:textColor="@color/colorAccent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:textSize="18dp"
+        android:text="Name"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvDOBLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etName"
+        android:layout_marginTop="14dp"
+        android:text="Date of  Birth"
+        android:textColor="@color/colorAccent"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvName"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/enter_name"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignEnd="@+id/bSubmit" />
+
+    <EditText
+        android:id="@+id/etDOB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDOBLabel"
+        android:ems="10"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:textIsSelectable="true"
+        android:hint="@string/enter_dob"
+        android:textColorHint="@color/colorPrimary"
+        android:onClick="setDate"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignEnd="@+id/etName" />
+
+    <TextView
+        android:id="@+id/tvGenderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="@string/select_sex"
+        android:layout_below="@+id/etDOB"
+        android:textColor="@color/colorAccent"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:id="@+id/radioGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvGenderLabel"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvGenderLabel"
+            android:enabled="true"
+            android:text="@string/male_txt" />
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/radioGender"
+            android:layout_toEndOf="@+id/radioGender"
+            android:text="@string/female_txt" />
+
+    </RadioGroup>
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/bSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_button_txt"
+        android:layout_marginBottom="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        app:srcCompat="@drawable/no_photo"
+        android:scaleType="centerCrop"
+        android:background="#000000"
+        android:layout_alignTop="@+id/tvName"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/picUploadLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click image view to add/update"
+        android:layout_below="@+id/tvGenderLabel"
+        android:textColor="@color/colorAccent"
+        android:layout_alignStart="@+id/ivPhoto" />
+
+</RelativeLayout>

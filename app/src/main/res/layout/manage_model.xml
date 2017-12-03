@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_marginRight="5dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp">
+
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:src="@mipmap/ic_edu" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textColor="#040404"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:layout_below="@+id/thumbnail"
+        android:layout_alignStart="@+id/thumbnail"
+        android:layout_alignEnd="@+id/thumbnail" />
+
+    <TextView
+        android:id="@+id/tvDOBLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="27dp"
+        android:text="DOB"
+        android:textColor="#040404"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/thumbnail" />
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvDOBLabel"
+        android:layout_below="@+id/tvDOBLabel"
+        android:layout_marginTop="15dp"
+        android:text="Gender"
+        android:textColor="#040404"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvGenderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvGender"
+        android:layout_alignBottom="@+id/tvGender"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/tvGender"
+        android:text="Male" />
+
+    <TextView
+        android:id="@+id/tvDOB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DD-MM-YYYY"
+        android:layout_above="@+id/tvGender"
+        android:layout_alignStart="@+id/tvGenderLabel" />
+
+    <Button
+        android:id="@+id/btUpdate"
+        style="@style/MiniButtonStyle"
+        android:text="@string/upd_button_txt"
+        android:onClick="updateRec"
+        android:layout_alignBaseline="@+id/tvName"
+        android:layout_alignBottom="@+id/tvName"
+        android:layout_toStartOf="@+id/btDelete" />
+
+    <Button
+        android:id="@+id/btDelete"
+        style="@style/MiniButtonStyle"
+        android:text="@string/del_button_txt"
+        android:onClick="deleteRec"
+        android:layout_marginStart="13dp"
+        android:layout_alignBaseline="@+id/tvName"
+        android:layout_alignBottom="@+id/tvName"
+        android:layout_alignStart="@+id/tvGenderLabel" />
+
+</RelativeLayout>

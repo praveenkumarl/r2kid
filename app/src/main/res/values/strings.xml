@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">r2Kid</string>
+    <string name="enter_name">Enter name</string>
+    <string name="enter_dob">Select DOB</string>
+    <string name="select_sex">Select gender</string>
+    <string name="male_txt">Male</string>
+    <string name="female_txt">Female</string>
+    <string name="submit_txt">Submit</string>
+    <string name="add_button_txt">Add</string>
+    <string name="upd_button_txt">Update</string>
+    <string name="del_button_txt">Delete</string>
+    <string name="prev_txt">Prev</string>
+    <string name="next_txt">Next</string>
+    <string name="education">Education</string>
+</resources>
